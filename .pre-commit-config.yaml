@@ -1,0 +1,20 @@
+repos:
+  # Using this mirror lets us use mypyc-compiled black, which is about 2x faster
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 25.1.0
+    hooks:
+      - id: black-jupyter
+        args: [
+          --preview,
+          --enable-unstable-feature=string_processing,
+          --enable-unstable-feature=multiline_string_handling,
+          --enable-unstable-feature=hug_parens_with_braces_and_square_brackets
+          ]
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+  - repo: https://github.com/PyCQA/flake8
+    rev: '7.3.0'
+    hooks:
+    -   id: flake8

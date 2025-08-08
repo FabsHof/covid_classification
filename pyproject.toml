@@ -1,0 +1,33 @@
+[project]
+name = "covid-classification"
+version = "0.1.0"
+description = "A project for classifying COVID-19 related X-ray images."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "albumentations>=2.0.8",
+    "opencv-python>=4.12.0.88",
+    "pre-commit>=4.2.0",
+    "python-dotenv>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.black]
+line-length = 80
+include = '(src|notebooks)/.*(ipynb|py)$'
+
+[tool.isort]
+profile = 'black'
+src_paths = ['src', 'notebooks']
+skip = ['.venv', '.history', '__pycache__']
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.1",
+]
