@@ -1,6 +1,6 @@
 # 🦠 COVID-19 Classification
 
-This repository contains the machine learning project conducted in the "Machine Learning Engineer" course at [DataScientest](https://datascientest.com). In some parts it is simplified to focus on the main concepts and does not include any work from the other course participants. Other parts are extended to demonstrate the application of advanced techniques.
+This repository contains the continuation of the machine learning project conducted during the "Machine Learning Engineer" course at [DataScientest](https://datascientest.com). In some parts it is simplified to focus on the main concepts and does not include any work from the other course participants. Other parts are extended to demonstrate the application of advanced techniques.
 
 ## 📚 Overview
 
