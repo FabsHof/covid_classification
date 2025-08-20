@@ -18,3 +18,13 @@ repos:
     rev: '7.3.0'
     hooks:
     -   id: flake8
+  # Run unit tests only when merging to main branch
+  - repo: local
+    hooks:
+      - id: pytest-main-merge
+        name: pytest (main branch merge only)
+        entry: bash -c 'if [[ "$PRE_COMMIT_TO_REF" == "refs/heads/main" ]] || [[ "$PRE_COMMIT_FROM_REF" == *"main"* ]]; then uv run pytest tests/ --tb=short --maxfail=1 -q; else echo "Skipping tests (not merging to main)"; fi'
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true
