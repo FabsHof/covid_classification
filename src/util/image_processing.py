@@ -152,7 +152,7 @@ def create_masked_images(
 
             logger.info(
                 f"Processed {processed_count} images for class {cls}, split"
-                f" {split}"
+                f"Processed {processed_count} images for class {cls}, split {split}"
             )
 
     logger.info("Masked images creation completed")
