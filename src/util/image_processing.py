@@ -4,6 +4,7 @@ Image processing utilities for applying masks and creating masked images.
 
 import logging
 import os
+import shutil
 from os import path
 from typing import List
 
@@ -90,8 +91,6 @@ def create_masked_images(
             "\t- Removing existing masked images directory:"
             f" {masked_images_dir}"
         )
-        import shutil
-
         shutil.rmtree(masked_images_dir)
 
     # Create fresh directory structure

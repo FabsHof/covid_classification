@@ -50,7 +50,7 @@ class TestApplyMaskToImage:
         np.testing.assert_array_equal(result, mock_result)
 
     @patch("src.util.image_processing.cv2")
-    def test_apply_mask_different_dims(self, mock_cv2, temp_dir):  # noqa: E501
+    def test_apply_mask_different_dims(self, mock_cv2, temp_dir):
         """Test mask application with different image/mask dimensions."""
         image_path = os.path.join(temp_dir, "test_image.png")
         mask_path = os.path.join(temp_dir, "test_mask.png")
