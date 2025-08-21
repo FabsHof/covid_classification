@@ -3,3 +3,6 @@ exclude = .history,.git,.venv,.history,__pycache__
 max-line-length = 80
 max-complexity = 15
 extend-ignore = E203
+# Ignore unused imports in conftest.py files as they serve as fixture registries
+per-file-ignores = 
+    tests/conftest.py:F401
